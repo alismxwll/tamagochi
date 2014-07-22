@@ -2,37 +2,38 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
   <title>Tamagochi</title>
 </head>
 <body>
-  <h1 class="text-center">Tamagochi</h1>
+  <div id="center" class="col-md-8" style="text-align:center">
+  <h1 class="text-center" style="text-align:center">Tamagochi</h1>
   <form id="tam-name">
-    <input id ="name" placeholder="Name" required></input>
-    <button type="submit" class="btn btn-info btn-lg btn-block">Submit</button>
-
-
+    <input id ="name" placeholder="Name" style="text-align:center" required></input>
+    <button type="submit" class="btn btn-info btn-lg">Submit</button>
   </form>
+</div>
     <div class="row" class="col-md-8"><h1 class="text-center" id="name-output"></h1></div>
     <div class="row">
 
      <div class="col-md-4" id="feed-tama">
-      <h1 class="text-center">Food</h1>
-      <h2 id="food"></h2>
+      <h3 class="text-center">Food</h3>
+      <h4 id="food"></h4>
       <button class="btn btn-success btn-lg btn-block">Force Feed Your Tamagochi</button>
     </div>
 
      <div class="col-md-4" id="sleep-tama">
-      <h1 class="text-center">Sleep</h1>
-      <h2 id="sleep"></h2>
+      <h3 class="text-center">Sleep</h3>
+      <h4 id="sleep"></h4>
       <button id="sleep-tama" class="btn btn-success btn-lg btn-block">Force Your Tamagochi to sleep</button>
     </div>
 
     <div class="col-md-4" id="activity-tama">
-      <h1 class="text-center">Activity</h1>
-      <h2 id="activity"></h2>
+      <h3 class="text-center">Activity</h3>
+      <h4 id="activity"></h4>
       <button id="activity-tama" class="btn btn-success btn-lg btn-block">Force Your Tamagochi to Run</button>
     </div>
     </div>

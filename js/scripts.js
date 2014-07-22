@@ -1,9 +1,9 @@
 var Tamagochi = {
   initialize: function(name) {
   this.name = name;
-  this.foodLevel = 999999;
-  this.sleepLevel = 999999;
-  this.activityLevel = 999999;
+  this.foodLevel = 100;
+  this.sleepLevel = 100;
+  this.activityLevel = 100;
   },
   timePasses: function(){
   this.foodLevel = this.foodLevel - 1;
@@ -12,16 +12,7 @@ var Tamagochi = {
   },
   isAlive: function(){
     return this.foodLevel > 0
-},
-  feed: function() {
-    return this.foodLevel + 1;
   },
-  sleep: function() {
-    return this.sleepLevel + 1;
-  },
-  run: function() {
-    return this.sleepLevel + 1;
-  }
 };
 
 $(document).ready(function() {
@@ -39,8 +30,7 @@ $(document).ready(function() {
       $("#food").text(tamagochi.foodLevel);
       $("#sleep").text(tamagochi.sleepLevel);
       $("#activity").text(tamagochi.activityLevel);
-      console.log(tamagochi.foodLevel);
-      if (tamagochi.foodLevel < 1) {
+      if (tamagochi.foodLevel < 1 || tamagochi.sleepLevel < 1 || tamagochi.activityLevel < 1) {
         alert("gary died");
         clearInterval(intervalID);
       }
